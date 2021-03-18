@@ -97,22 +97,12 @@ namespace Design_Patterns___Creational_Patterns
 
             var animalFactory = AnimalFactory.GetAnimalFactory;// Singleton for AnimalFactory object
 
-            var catAnimal = animalFactory.GetAnimalInstance("cat");         //Create objects with AnimalFactory
-            var dogAnimal = animalFactory.GetAnimalInstance("dog");
-            var horseAnimal = animalFactory.GetAnimalInstance("horse");
-
-            //Cat c = new Cat(); // Access don't permitted
-            //Cat d;
-            //d.GetInstance(); // Use unsigned local - interdicted
-                       
-            var cat = catAnimal as Cat;
-            var dog = dogAnimal as Dog;
-            var horse = horseAnimal as Horse;
+            var cat = animalFactory.GetAnimalInstance("cat") as Cat;         //Create objects with AnimalFactory
+            var dog = animalFactory.GetAnimalInstance("dog") as Dog;
+            var horse = animalFactory.GetAnimalInstance("horse") as Horse;
 
             Console.WriteLine(cat.Tail + ", " + dog.Tail + ", " + horse.Tail);
-
-            //This is a problem.  And problem in unforeseen injection in other classes
-            var problemCat = cat.GetInstance();           
+     
         }
     }
 }

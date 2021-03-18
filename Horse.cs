@@ -6,7 +6,7 @@ namespace Design_Patterns___Creational_Patterns
 {
     class Horse : Animal
     {        
-        private Horse()
+        public Horse()
         {
             Tail = "Luxurious";
         }

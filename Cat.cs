@@ -5,8 +5,8 @@ using System.Text;
 namespace Design_Patterns___Creational_Patterns
 {
     class Cat : Animal
-    {        
-        private Cat()
+    {
+        public Cat()
         {
             Tail = "long";
         }        

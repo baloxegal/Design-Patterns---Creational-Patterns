@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Design_Patterns___Creational_Patterns
 {
-    class CarParkService<T, U, D> where T : Car<Profile, IMoveable> where U : Enum where D : Enum
+    class CarParkService<T, U, D> where T : Car<Profile, IMoveable>
     {        
         public T[] park;
         public Dictionary<U, int> DestinationsDistanceFromBase;        

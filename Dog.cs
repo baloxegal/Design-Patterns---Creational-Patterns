@@ -6,7 +6,7 @@ namespace Design_Patterns___Creational_Patterns
 {
     class Dog : Animal
     {        
-        private Dog()
+        public Dog()
         {
             Tail = "Small";
         }
