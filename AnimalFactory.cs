@@ -21,9 +21,9 @@ namespace Design_Patterns___Creational_Patterns
             if (property.Equals("cat"))
                 return cat.GetInstance();
             if (property.Equals("dog"))
-                return cat.GetInstance();
+                return dog.GetInstance();
             if (property.Equals("horse"))
-                return cat.GetInstance();
+                return horse.GetInstance();
             return null;
         }
     }

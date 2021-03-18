@@ -112,6 +112,8 @@ namespace Design_Patterns___Creational_Patterns
             var dog = dogAnimal as Dog;
             var horse = horseAnimal as Horse;
 
+            Console.WriteLine(cat.Tail + ", " + dog.Tail + ", " + horse.Tail);
+
             //This is a problem.  And problem in unforeseen injection in other classes
             var problemCat = cat.GetInstance();           
         }
