@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Design_Patterns___Creational_Patterns
 {
@@ -98,7 +96,24 @@ namespace Design_Patterns___Creational_Patterns
             }
             Console.WriteLine("=============================================");
 
-            
+            //AnimalFactory
+
+            var animalFactory = AnimalFactory.GetAnimalFactory;// Singleton for AnimalFactory object
+
+            var catAnimal = animalFactory.GetAnimalInstance("cat");         //Create objects with AnimalFactory
+            var dogAnimal = animalFactory.GetAnimalInstance("dog");
+            var horseAnimal = animalFactory.GetAnimalInstance("horse");
+
+            //Cat c = new Cat(); // Access don't permitted
+            //Cat d;
+            //d.GetInstance(); // Use unsigned local - interdicted
+                       
+            var cat = catAnimal as Cat;
+            var dog = dogAnimal as Dog;
+            var horse = horseAnimal as Horse;
+
+            //This is a problem.  And problem in unforeseen injection in other classes
+            var problemCat = cat.GetInstance();           
         }
     }
 }

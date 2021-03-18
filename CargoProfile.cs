@@ -5,8 +5,8 @@ namespace Design_Patterns___Creational_Patterns
     sealed class CargoProfile : Profile
     {
         //Sixth Attempt 
-        private static readonly Lazy<CargoProfile> cargoProf = new Lazy<CargoProfile>(() => new CargoProfile(), true);
-        public static CargoProfile CargoProf { get => cargoProf.Value; }
+        private static readonly Lazy<CargoProfile> _cargoProf = new Lazy<CargoProfile>(() => new CargoProfile(), true);
+        public static CargoProfile CargoProf { get => _cargoProf.Value; }
         private CargoProfile()
         {
         }
