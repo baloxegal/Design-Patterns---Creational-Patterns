@@ -10,8 +10,7 @@ namespace Design_Patterns___Creational_Patterns
             Profile cargoProfile = CargoProfile.CargoProf;
             Car<Profile, IMoveable> car1 = new Car<Profile, IMoveable>(cargoProfile, typeFly, Fuel.DIESEL, "Big Trailer");
             car1.Registry = "CVB 825";
-            car1.TypeMove.MoveRight();
-            ((IFlyable)car1.TypeMove).MoveUp();
+            
             var a = car1.Profile as CargoProfile;
             a.CargoCapacity = 5000;
             a.Carry = 4900;
@@ -68,9 +67,7 @@ namespace Design_Patterns___Creational_Patterns
             IMoveable typeMove = new Move();
             Car<Profile, IMoveable> car2 = new Car<Profile, IMoveable>(passangerProfile, typeMove, Fuel.PETROL);
             car2.Registry = "CMU 999";
-
-            car2.TypeMove.MoveRight();
-            car2.TypeMove.MoveLeft();
+                        
             ((PassangerProfile)car2.Profile).Seats = 50;
             ((PassangerProfile)car2.Profile).Tickets = 40;
             ((PassangerProfile)car2.Profile).Rout();
